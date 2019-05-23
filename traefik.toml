@@ -1,0 +1,25 @@
+defaultEntryPoints = [ "http" ]
+#logLevel = "DEBUG"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+# [web]
+# address = ":80"
+
+[file]
+
+[backends]
+  [backends.backend2]
+    [backends.backend2.servers.server1]
+      url = "http://localhost:8080"
+      weight = 1
+
+[frontends]
+  [frontends.frontend1]
+    backend = "backend2"
+    entryPoints = [ "http" ]
+
+    [frontends.frontend1.routes.main]
+    rule = "Host: localhost"

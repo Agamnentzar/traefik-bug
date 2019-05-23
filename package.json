@@ -1,0 +1,16 @@
+{
+  "name": "traefik-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clusterws/cws": "^0.14.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.0"
+  }
+}
